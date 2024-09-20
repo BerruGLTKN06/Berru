@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Akıllı evler için enerji verimlilik hesaplayıcısı</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>Evinizin enerji verimliliğini hesaplayın!</h1>
+      <p>Girişimde bulunun ve aşırı enerji tüketimi sorununu çözün</p>
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <h2 class="main__title">Evınızın büyüklüğünü seçin:</h2>
+    <ul class="list">
+      <li class="list__item">
+        <a href="/1">
+        <img class="item__img" src="../static/img/home.svg" alt="home">
+        <span>Küçük bir ev</span></a>
+      </li>
+      <!-- Görev #1 -->
+      <li class="list__item">
+        <a href="/2">
+        <img class="item__img" src="../static/img/home.svg" alt="home">
+        <span>Orta bir ev</span></a>
+      </li>
+      <li class="list__item">
+        <a href="/3">
+        <img class="item__img" src="../static/img/home.svg" alt="home">
+        <span>büyük bir ev</span></a>
+      </li>
+      <li class="list__item">  
+        <a href="/1">
+          <img class="item__img" src="data:image/png;base64,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" alt="home">
+          <span>Apartman</span></a>
+    </ul>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
