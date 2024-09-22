@@ -11,7 +11,7 @@ def result_calculate(size, lights, device):
     devices_coef = 5   
     return size * home_coef + lights * light_coef + device * devices_coef 
 
-# İlk sayfa
+# Birinci sayfa
 @app.route('/')
 def index():
     return render_template('index.html')
